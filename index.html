@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>税理士法人G&Jパートナーズ｜かかりつけの税理士。数字の不安は、まかせてね。</title>
+<meta name="description" content="これから開業する美容師さんのための、かかりつけ税理士。堅苦しさは抜きで、数字がわからなくても大丈夫。あなたの夢とお店づくりに寄り添います。初回相談無料・LINE相談OK。">
+
+<!-- ========== FONTS（明朝×セリフのエレガント系） ========== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   税理士事務所LP  —  Gray & White / Elegant Serif
+   ============================================================ */
+
+:root{
+  --gray:      #7a756f;
+  --gray-alt:  #6f6a63;
+  --gray-dark: #33302c;
+  --panel:     rgba(255,255,255,.07);
+  --panel-2:   rgba(255,255,255,.13);
+  --line:      rgba(255,255,255,.28);
+  --line-soft: rgba(255,255,255,.15);
+  --ink:       #ffffff;
+  --ink-mute:  rgba(255,255,255,.78);
+  --ink-dim:   rgba(255,255,255,.52);
+  --accent:    #e6b48c;   /* ごく控えめの温かいアクセント */
+  --maxw:      1180px;
+  --serif:     "Cormorant Garamond", serif;      /* 英字ディスプレイ */
+  --mincho:    "Shippori Mincho", serif;          /* 和文見出し */
+  --gothic:    "Zen Kaku Gothic New", sans-serif; /* 和文本文 */
+  --logo:      "Cinzel", serif;                   /* ロゴ（会社名） */
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--gothic);
+  background:var(--gray);
+  color:var(--ink);
+  line-height:2.05;
+  font-weight:400;
+  letter-spacing:.05em;
+  font-feature-settings:"palt";
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+
+/* ---------- セクション見出し（01 / Concept 形式） ---------- */
+.shead{display:flex;align-items:flex-end;gap:26px;margin-bottom:14px}
+.shead .num{font-family:var(--serif);font-size:15px;letter-spacing:.28em;color:var(--ink-mute);padding-bottom:10px;position:relative;white-space:nowrap}
+.shead .num::before{content:"";position:absolute;top:0;left:0;width:26px;height:1px;background:var(--accent)}
+.shead .titles .en{font-family:var(--serif);font-weight:400;font-size:clamp(38px,6vw,72px);line-height:.95;letter-spacing:.02em}
+.shead .titles .jp{font-family:var(--mincho);font-weight:400;font-size:13px;letter-spacing:.34em;color:var(--ink-mute);margin-top:12px}
+.center .shead{justify-content:center;text-align:center}
+.center .lead{margin-left:auto;margin-right:auto}
+.lead{color:var(--ink-mute);font-size:clamp(14.5px,1.6vw,16px);max-width:600px;font-weight:400;margin-top:26px}
+.lead.oneline{max-width:none;white-space:nowrap}
+@media(max-width:820px){.lead.oneline{white-space:normal;max-width:600px}}
+
+/* ---------- ボタン（細い罫線の長方形） ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:12px;
+  font-family:var(--mincho);font-weight:500;letter-spacing:.16em;font-size:14.5px;
+  padding:19px 42px;border:1px solid var(--line);color:#fff;background:transparent;
+  transition:.4s cubic-bezier(.2,.7,.3,1);cursor:pointer;
+}
+.btn:hover{background:#fff;color:var(--gray-dark);border-color:#fff}
+.btn-fill{background:#fff;color:var(--gray-dark);border-color:#fff}
+.btn-fill:hover{background:transparent;color:#fff;border-color:#fff}
+.btn-line{background:#06c755;border-color:#06c755;color:#fff}
+.btn-line:hover{background:#fff;color:#06c755;border-color:#fff}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:100;padding:26px 0;transition:.4s}
+.site-header.scrolled{padding:15px 0;background:rgba(122,117,111,.9);backdrop-filter:blur(12px)}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;flex-direction:column;line-height:1.3}
+.brand .en{font-family:var(--logo);font-weight:600;font-size:24px;letter-spacing:.1em;color:#fff}
+.brand .jp{font-family:var(--mincho);font-size:11px;letter-spacing:.3em;color:var(--ink-mute);margin-top:2px}
+.nav{display:flex;align-items:center;gap:34px}
+.nav a{font-family:var(--serif);font-size:17.6px;letter-spacing:.1em;color:#fff;transition:.3s;position:relative}
+.nav a .j{display:block;font-family:var(--gothic);font-size:10.5px;letter-spacing:.18em;color:var(--ink-mute);text-align:center;margin-top:1px}
+.nav a:hover{color:var(--accent)}
+.header-cta{display:flex;align-items:center}
+.header-cta .btn{padding:12px 26px;font-size:12.5px}
+.nav-toggle{display:none;flex-direction:column;gap:6px;background:none;border:0;cursor:pointer;padding:8px}
+.nav-toggle span{width:26px;height:1.5px;background:#fff;transition:.3s}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:150px 0 100px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;width:100%}
+.hero-copy .who{display:flex;align-items:center;gap:14px;margin-bottom:30px;opacity:0;transform:translateY(18px);animation:rise .9s .1s forwards}
+.hero-copy .who .av{width:60px;height:60px;border-radius:50%;background:#fff;border:1px solid var(--line);overflow:hidden;display:flex;align-items:flex-end;justify-content:center;flex-shrink:0}
+.hero-copy .who .av img{width:46px;margin-bottom:-2px}
+.hero-copy .who .t{font-family:var(--mincho);font-size:12.5px;letter-spacing:.2em;color:var(--ink-mute);line-height:1.7}
+.hero-copy .who .t b{display:block;font-weight:500;font-size:14.5px;color:#fff;letter-spacing:.12em}
+.hero-copy h1{font-family:var(--mincho);font-weight:500;font-size:clamp(46px,7.9vw,89px);line-height:1.5;letter-spacing:.04em;margin-bottom:30px;text-align:right;padding-right:12%}
+.hero-copy h1 .g-img{display:inline-block;height:1.55em;width:auto;vertical-align:-.5em;margin:0 .04em}
+.hero-copy h1 span{display:block;opacity:0;transform:translateY(26px)}
+.hero-copy h1 span:nth-child(1){animation:rise .9s .24s forwards}
+.hero-copy h1 span:nth-child(2){animation:rise .9s .4s forwards}
+.hero-copy .sub{font-family:var(--mincho);color:var(--ink-mute);font-size:clamp(15px,1.9vw,18px);line-height:2.3;margin-bottom:40px;text-align:center;opacity:0;transform:translateY(18px);animation:rise .9s .58s forwards}
+.hero-copy .rep-sign{display:flex;align-items:center;justify-content:center;gap:21px;padding-right:12%;opacity:0;transform:translateY(18px);animation:rise .9s .74s forwards}
+.hero-copy .rep-sign .av{width:81px;height:81px;border-radius:50%;overflow:hidden;border:1px solid var(--line);flex-shrink:0}
+.hero-copy .rep-sign .av img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+.hero-copy .rep-sign .t{font-family:var(--mincho);line-height:1.7}
+.hero-copy .rep-sign .t b{font-weight:500;font-size:22px;letter-spacing:.12em;margin-right:12px}
+.hero-copy .rep-sign .t i{font-style:normal;font-size:15px;color:var(--ink-mute);letter-spacing:.16em}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;opacity:0;transform:translateY(18px);animation:rise .9s .74s forwards}
+.hero-tags{margin-top:40px;display:flex;gap:28px;flex-wrap:wrap;opacity:0;animation:rise .9s .9s forwards}
+.hero-tags span{font-family:var(--mincho);font-size:13px;letter-spacing:.14em;color:var(--ink-mute);position:relative;padding-left:20px}
+.hero-tags span::before{content:"";position:absolute;left:0;top:50%;width:9px;height:9px;border:1px solid var(--accent);border-radius:50%;transform:translateY(-50%)}
+
+/* ヒーロー写真 */
+.hero-visual{position:relative;opacity:0;transform:translateY(26px);animation:rise 1.1s .5s forwards}
+.hero-visual .frame{position:relative;overflow:hidden}
+.hero-visual .frame img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:2s}
+.hero-visual::before{content:"";position:absolute;top:-14px;left:-14px;right:26px;bottom:26px;border:1px solid var(--line);z-index:-1}
+.hero-visual .cap{position:absolute;bottom:20px;left:20px;font-family:var(--serif);font-style:italic;font-size:18px;letter-spacing:.06em;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.45)}
+
+@keyframes rise{to{opacity:1;transform:none}}
+.scroll-cue{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:2;font-family:var(--serif);font-size:12px;letter-spacing:.3em;color:var(--ink-dim);writing-mode:vertical-rl;display:flex;align-items:center;gap:14px}
+.scroll-cue::after{content:"";width:1px;height:56px;background:linear-gradient(var(--ink-dim),transparent);animation:cue 2s infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ============================================================
+   SECTION 汎用
+   ============================================================ */
+.section{padding:clamp(84px,11vw,150px) 0;position:relative}
+.section.alt{background:var(--gray-alt)}
+.center{text-align:center}
+
+/* ---------- CONCEPT（写真＋テキスト） ---------- */
+.concept{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:center}
+.concept .photo{position:relative;overflow:hidden}
+.concept .photo img{width:100%;aspect-ratio:5/6;object-fit:cover}
+.concept .body{padding:0 0 0 72px}
+.concept .body .txt{font-family:var(--mincho);font-size:16px;line-height:2.5;color:var(--ink);margin-top:34px;letter-spacing:.06em}
+.concept .body .txt .accent{color:var(--accent)}
+.concept .body .sign{margin-top:30px;font-family:var(--serif);font-style:italic;font-size:20px;color:var(--ink-mute)}
+
+/* ---------- セクション横のラインアート ---------- */
+.il{display:block;height:auto}
+.hband{position:relative;max-width:920px;margin:4px auto 0;min-height:250px}
+.hband .cfig{position:absolute;right:0;bottom:6px;width:430px;opacity:.82}
+.hband .cline{position:absolute;left:0;right:0;bottom:6px;height:1px;background:rgba(255,255,255,.7)}
+.hband .cband-head{position:absolute;left:1%;bottom:14px;z-index:2}
+.concept-txt{font-family:var(--mincho);font-size:16px;line-height:2.55;letter-spacing:.06em;text-align:center;max-width:760px;margin:44px auto 0}
+.concept-txt .accent{color:var(--accent)}
+.concept-sign{text-align:center;margin-top:26px;font-family:var(--serif);font-style:italic;font-size:20px;color:var(--ink-mute)}
+@media(max-width:820px){
+  .hband{min-height:0;max-width:360px}
+  .hband .cfig{position:static;width:100%;margin:12px auto 0}
+  .hband .cline{display:none}
+  .hband .cband-head{position:static}
+  .concept-txt{font-size:15px;line-height:2.35}
+}
+.concept2{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;margin-top:50px}
+.concept2 .txt{font-family:var(--mincho);font-size:16px;line-height:2.55;letter-spacing:.06em;color:var(--ink)}
+.concept2 .txt .accent{color:var(--accent)}
+.concept2 .sign{margin-top:26px;font-family:var(--serif);font-style:italic;font-size:20px;color:var(--ink-mute)}
+.concept2 .il{width:100%;opacity:.9}
+.head-il{display:grid;grid-template-columns:1fr .82fr;gap:52px;align-items:center;text-align:left}
+.head-il .il{width:100%;max-width:430px;justify-self:end;opacity:.9}
+.flow-il{display:grid;grid-template-columns:1.1fr .8fr;gap:52px;align-items:center}
+.flow-il .flow{margin:0;max-width:none}
+.flow-il .il{width:100%;max-width:360px;justify-self:center;opacity:.9}
+@media(max-width:820px){
+  .concept2,.head-il,.flow-il{grid-template-columns:1fr;gap:34px}
+  .concept2 .il,.head-il .il,.flow-il .il{max-width:320px;justify-self:center;margin:0 auto;order:-1}
+}
+
+/* ---------- 悩み共感 ---------- */
+.worries{margin-top:60px;border-top:1px solid var(--line-soft)}
+.worry{display:grid;grid-template-columns:70px 1fr;gap:24px;align-items:center;padding:30px 8px;border-bottom:1px solid var(--line-soft);transition:.4s}
+.worry:hover{background:var(--panel);padding-left:20px}
+.worry .n{font-family:var(--serif);font-size:30px;color:var(--accent);letter-spacing:.05em}
+.worry p{font-family:var(--mincho);font-size:16px;color:var(--ink)}
+.worries-note{text-align:center;margin-top:56px;font-family:var(--mincho);font-weight:500;font-size:clamp(20px,3vw,30px);color:#fff;letter-spacing:.08em;line-height:1.9}
+.worries-note .small{display:block;font-size:14px;color:var(--ink-mute);font-weight:400;margin-top:14px;letter-spacing:.14em}
+
+/* ---------- 選ばれる理由 ---------- */
+.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:64px}
+.reason{padding:0 40px;text-align:center;position:relative}
+.reason+.reason::before{content:"";position:absolute;left:0;top:10%;bottom:10%;width:1px;background:var(--line-soft)}
+.reason .ic{width:48px;height:48px;margin:0 auto 26px;color:var(--accent);stroke-width:1}
+.reason .no{font-family:var(--serif);font-size:14px;letter-spacing:.24em;color:var(--ink-mute);margin-bottom:16px}
+.reason h3{font-family:var(--mincho);font-weight:500;font-size:21px;line-height:1.7;margin-bottom:18px;letter-spacing:.04em}
+.reason p{font-size:14px;color:var(--ink-mute);line-height:2.1}
+
+/* ---------- 帯（全面写真＋コピー） ---------- */
+.band{position:relative;padding:clamp(120px,18vw,220px) 0;text-align:center;background-position:center;background-size:cover;background-attachment:fixed}
+.band::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(51,48,44,.62),rgba(51,48,44,.62))}
+.band .inner{position:relative;z-index:2}
+.band .en{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(20px,3vw,30px);color:var(--accent);letter-spacing:.08em;margin-bottom:18px}
+.band h2{font-family:var(--mincho);font-weight:500;font-size:clamp(26px,4.6vw,46px);line-height:1.7;letter-spacing:.1em;color:#fff}
+
+/* ---------- サービス ---------- */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:64px}
+.svc{transition:.4s}
+.svc .ph{position:relative;overflow:hidden;margin-bottom:26px}
+.svc .ph img{width:100%;aspect-ratio:3/2;object-fit:cover;transition:1.2s}
+.svc:hover .ph img{transform:scale(1.06)}
+.svc .ph .no{position:absolute;top:16px;left:16px;font-family:var(--serif);font-size:15px;letter-spacing:.2em;color:#fff;background:rgba(51,48,44,.5);padding:4px 14px;backdrop-filter:blur(4px)}
+.svc h3{font-family:var(--mincho);font-weight:500;font-size:20px;letter-spacing:.05em;margin-bottom:4px}
+.svc .en{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--accent);letter-spacing:.08em;margin-bottom:14px}
+.svc p{font-size:14px;color:var(--ink-mute);line-height:2.1}
+
+/* ---------- 料金 ---------- */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:64px;border:1px solid var(--line-soft)}
+.plan{padding:52px 36px;text-align:center;position:relative;transition:.4s}
+.plan+.plan{border-left:1px solid var(--line-soft)}
+.plan.featured{background:var(--panel-2)}
+.plan.featured .tag{position:absolute;top:0;left:50%;transform:translate(-50%,-50%);font-family:var(--serif);font-style:italic;font-size:13px;letter-spacing:.1em;color:var(--gray-dark);background:var(--accent);padding:4px 20px}
+.plan:hover{background:var(--panel)}
+.plan .pname{font-family:var(--mincho);font-weight:500;font-size:19px;letter-spacing:.08em;margin-bottom:8px}
+.plan .ptgt{font-size:12.5px;color:var(--ink-dim);margin-bottom:28px;letter-spacing:.08em}
+.plan .price{font-family:var(--serif);font-weight:500;font-size:52px;color:#fff;line-height:1;letter-spacing:.02em}
+.plan .price .yen{font-size:22px}
+.plan .price small{font-size:16px;color:var(--ink-mute)}
+.plan .per{font-size:11.5px;color:var(--ink-dim);margin:8px 0 30px;letter-spacing:.1em}
+.plan ul{text-align:left;display:flex;flex-direction:column;gap:15px;margin-bottom:36px}
+.plan ul li{font-family:var(--mincho);font-size:14px;color:var(--ink);padding-bottom:15px;border-bottom:1px solid var(--line-soft);letter-spacing:.04em}
+.plan .btn{width:100%;padding:15px}
+.price-note{text-align:center;font-size:12.5px;color:var(--ink-dim);margin-top:30px;letter-spacing:.08em}
+
+/* ---------- 流れ ---------- */
+.flow{margin-top:64px;max-width:760px;margin-left:auto;margin-right:auto}
+.step{display:grid;grid-template-columns:auto 1fr;gap:34px;padding:34px 0;border-bottom:1px solid var(--line-soft);align-items:baseline}
+.step:first-child{border-top:1px solid var(--line-soft)}
+.step .n{font-family:var(--serif);font-size:40px;color:var(--accent);line-height:1;letter-spacing:.02em}
+.step h4{font-family:var(--mincho);font-weight:500;font-size:19px;letter-spacing:.06em;margin-bottom:8px}
+.step p{font-size:14px;color:var(--ink-mute);line-height:2.05}
+
+/* ---------- 代表紹介 ---------- */
+.rep{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center;margin-top:56px}
+.rep-photo{position:relative}
+.rep-photo .disc{aspect-ratio:1;border-radius:50%;overflow:hidden;border:1px solid var(--line)}
+.rep-photo .disc img{width:100%;height:100%;object-fit:cover;object-position:50% 10%}
+.rep-photo::before{content:"";position:absolute;inset:-16px;border:1px solid var(--line-soft);border-radius:50%;z-index:-1}
+.rep-body .role{font-family:var(--serif);font-style:italic;color:var(--accent);font-size:17px;letter-spacing:.06em}
+.rep-body .name{font-family:var(--mincho);font-weight:500;font-size:clamp(26px,3.4vw,38px);margin:8px 0 2px;letter-spacing:.08em}
+.rep-body .name small{font-family:var(--serif);font-size:15px;color:var(--ink-mute);font-weight:400;margin-left:14px;letter-spacing:.1em}
+.rep-body p{font-family:var(--mincho);color:var(--ink-mute);font-size:15px;margin-top:22px;line-height:2.3;letter-spacing:.04em}
+.rep-body .quote{font-family:var(--mincho);font-weight:500;font-size:17px;color:#fff;line-height:2.1;margin-top:28px;padding-left:26px;border-left:1px solid var(--accent);letter-spacing:.05em}
+
+/* ---------- 声 ---------- */
+.voices{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;margin-top:60px}
+.voice{text-align:center}
+.voice .mark{font-family:var(--serif);font-size:70px;line-height:.5;color:var(--line);height:34px;display:block}
+.voice p{font-family:var(--mincho);font-size:15px;color:var(--ink);line-height:2.2;margin:20px 0 22px}
+.voice .who{font-family:var(--serif);font-size:14px;letter-spacing:.14em;color:var(--ink-mute)}
+
+/* ---------- FAQ ---------- */
+.faq{margin-top:56px;max-width:840px;margin-left:auto;margin-right:auto}
+.qa{border-bottom:1px solid var(--line-soft)}
+.qa summary{list-style:none;cursor:pointer;padding:28px 50px 28px 46px;position:relative;font-family:var(--mincho);font-weight:500;font-size:16.5px;letter-spacing:.05em;transition:.3s}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::before{content:"Q";position:absolute;left:0;top:26px;font-family:var(--serif);font-size:22px;color:var(--accent)}
+.qa summary::after{content:"";position:absolute;right:10px;top:34px;width:14px;height:1px;background:var(--accent);transition:.3s}
+.qa summary .cross{position:absolute;right:16px;top:28px;width:1px;height:14px;background:var(--accent);transition:.3s}
+.qa[open] summary .cross{transform:scaleY(0)}
+.qa summary:hover{color:var(--accent)}
+.qa .a{padding:0 46px 30px 46px;font-family:var(--mincho);color:var(--ink-mute);font-size:14.5px;line-height:2.2}
+
+/* ---------- CTA ---------- */
+.cta{position:relative;text-align:center;padding:clamp(110px,15vw,180px) 0;background-position:center;background-size:cover}
+.cta::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(51,48,44,.72),rgba(51,48,44,.72))}
+.cta-inner{position:relative;z-index:2}
+.cta .en{font-family:var(--serif);font-style:italic;font-size:clamp(22px,3.4vw,34px);color:var(--accent);letter-spacing:.06em;margin-bottom:20px}
+.cta h2{font-family:var(--mincho);font-weight:500;font-size:clamp(26px,4.4vw,44px);line-height:1.8;margin-bottom:24px;letter-spacing:.08em;color:#fff}
+.cta p{font-family:var(--mincho);color:var(--ink-mute);margin-bottom:46px;font-size:15.5px;letter-spacing:.06em}
+.cta-actions{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+.cta .note{margin-top:30px;font-size:12.5px;color:var(--ink-dim);letter-spacing:.1em}
+
+/* ---------- FOOTER ---------- */
+.footer{background:var(--gray-dark);color:#e8e5e1;padding:90px 0 40px}
+.footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:50px;margin-bottom:64px}
+.footer .brand .en{color:#fff}
+.footer .brand .jp{color:#b0aaa2}
+.footer-desc{font-family:var(--mincho);color:#b0aaa2;font-size:13.5px;margin-top:24px;max-width:320px;line-height:2.1}
+.footer h5{font-family:var(--serif);letter-spacing:.16em;color:var(--accent);font-size:15px;margin-bottom:24px}
+.footer-links li{margin-bottom:15px}
+.footer-links a{font-family:var(--mincho);color:#cfcac3;font-size:13.5px;letter-spacing:.06em;transition:.3s}
+.footer-links a:hover{color:#fff}
+.footer-info li{font-family:var(--mincho);color:#cfcac3;font-size:13.5px;margin-bottom:15px;display:flex;gap:14px;letter-spacing:.06em}
+.footer-info .k{font-family:var(--serif);color:var(--accent);font-size:12px;min-width:46px;letter-spacing:.1em}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:30px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-bottom small{font-family:var(--serif);color:#8f8a83;font-size:12px;letter-spacing:.08em}
+
+/* ---------- モバイル追従バー ---------- */
+.mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:99;background:rgba(51,48,44,.96);backdrop-filter:blur(10px);padding:12px;gap:12px;border-top:1px solid var(--line-soft)}
+.mobile-bar .btn{flex:1;padding:15px;font-size:13px}
+
+/* ---------- scroll reveal ---------- */
+.reveal{opacity:0;transform:translateY(30px);transition:1s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:48px}
+  .hero-visual{max-width:420px;margin:0 auto}
+  .concept{grid-template-columns:1fr;gap:0}
+  .concept .body{padding:44px 0 0}
+  .reasons{grid-template-columns:1fr;gap:50px}
+  .reason{padding:0}
+  .reason+.reason::before{display:none}
+  .services{grid-template-columns:1fr;gap:44px}
+  .plans{grid-template-columns:1fr}
+  .plan+.plan{border-left:0;border-top:1px solid var(--line-soft)}
+  .rep{grid-template-columns:1fr;gap:40px}
+  .rep-photo{max-width:340px;margin:0 auto}
+  .voices{grid-template-columns:1fr;gap:50px}
+  .footer-top{grid-template-columns:1fr;gap:36px}
+  .band{background-attachment:scroll}
+}
+@media(max-width:720px){
+  .nav,.header-cta{display:none}
+  .nav-toggle{display:flex}
+  .mobile-bar{display:flex}
+  body{padding-bottom:72px}
+  .nav.open{display:flex;position:fixed;inset:0;background:rgba(51,48,44,.98);flex-direction:column;justify-content:center;gap:34px;z-index:98}
+  .nav.open a{font-size:26px}
+  .nav.open a .j{font-size:11px;margin-top:4px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="header">
+  <div class="wrap header-inner">
+    <a href="#" class="brand">
+      <span class="en">G&amp;J Partners</span>
+      <span class="jp">かかりつけの税理士</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#concept">Concept<span class="j">想い</span></a>
+      <a href="#reasons">Features<span class="j">えらばれる理由</span></a>
+      <a href="#services">Service<span class="j">できること</span></a>
+      <a href="#price">Price<span class="j">料金</span></a>
+      <a href="#flow">Flow<span class="j">はじめかた</span></a>
+      <a href="#faq">FAQ<span class="j">よくある質問</span></a>
+    </nav>
+    <div class="header-cta">
+      <a href="#contact" class="btn btn-line">LINEで相談</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>
+        <span><img class="g-img" src="assets/kakaritsuke.png" alt="かかりつけ"></span>
+        <span>税理士。</span>
+      </h1>
+      <p class="sub">
+        かしこまらなくて、大丈夫。<br>
+        数字の不安は、ぜんぶ任せて。
+      </p>
+      <div class="rep-sign">
+        <span class="av"><img src="assets/tamai-face.png" alt="玉井 貴幸"></span>
+        <span class="t"><b>玉井 貴幸</b><i>代表税理士</i></span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="frame"><img src="assets/top.jpg" alt="あたたかい店構え"></div>
+      <span class="cap">Feel free to ask.</span>
+    </div>
+  </div>
+  <div class="scroll-cue">SCROLL</div>
+</section>
+
+<!-- ================= CONCEPT ================= -->
+<section class="section alt" id="concept">
+  <div class="wrap">
+    <div class="hband reveal">
+      <div class="cband-head">
+        <div class="shead">
+          <span class="num">01</span>
+          <span class="titles"><span class="en">Concept</span><span class="jp">わたしたちの想い</span></span>
+        </div>
+      </div>
+      <span class="cline"></span>
+      <img class="cfig" src="assets/illust1p.png" alt="髪を切る美容師のイラスト">
+    </div>
+    <div class="reveal">
+      <p class="concept-txt">
+        「税理士さんって堅そう。専門用語も多そうで、<span class="accent">なんだか話しかけにくい</span>」<br>
+        開業を考える美容師さんから、そんな声をよくいただきます。<br><br>
+        でも、どうか身構えないでください。<br>
+        <span class="accent">数字や専門用語がわからなくても、まったく問題ありません。</span><br>
+        わたしたちは、いちばん話しやすいかかりつけの税理士でありたいから。<br><br>
+        だからまずは、お金の話より先に——<br>
+        あなたの<span class="accent">「夢」や「どんなお店にしたいか」</span>を聞かせてください。<br>
+        経営のことも、それ以外の小さな不安も、ぜんぶ一緒に考えます。
+      </p>
+      <p class="concept-sign">G&amp;J Partners</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 悩み共感 ================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="shead">
+        <span class="num">02</span>
+        <span class="titles"><span class="en">Worries</span><span class="jp">こんな時に</span></span>
+      </div>
+      <p class="lead">これから独立・開業する美容師さんから、よくいただくお声です。</p>
+    </div>
+    <div class="worries reveal">
+      <div class="worry"><span class="n">01</span><p>税理士さんって、なんだか堅そう…。専門用語も多そうで、話しかけにくい気がする。</p></div>
+      <div class="worry"><span class="n">02</span><p>数字とか会計の話は、正直あまり得意じゃない…。ついていけるか不安。</p></div>
+      <div class="worry"><span class="n">03</span><p>自分のお店を持ちたいけど、お金まわりは何から始めればいいの？</p></div>
+      <div class="worry"><span class="n">04</span><p>お金のことだけじゃなく、お店づくりの相談にものってくれる人がいたら。</p></div>
+    </div>
+    <p class="worries-note reveal">その不安、ぜんぶ受け止めます。<span class="small">堅苦しさは抜きで。むずかしい話は、やさしい言葉に翻訳してお伝えします。</span></p>
+  </div>
+</section>
+
+<!-- ================= 選ばれる理由 ================= -->
+<section class="section alt" id="reasons">
+  <div class="wrap">
+    <div class="hband reveal">
+      <div class="cband-head">
+        <div class="shead">
+          <span class="num">03</span>
+          <span class="titles"><span class="en">Features</span><span class="jp">えらばれる理由</span></span>
+        </div>
+      </div>
+      <span class="cline"></span>
+      <img class="cfig" src="assets/illust2p.png" alt="ハサミとコームのイラスト">
+    </div>
+    <p class="lead" style="margin:26px auto 0;text-align:center">「申告して終わり」ではありません。<br>あなたの事業のいちばん近くで、ずっと伴走します。</p>
+    <div class="reasons">
+      <div class="reason reveal">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <div class="no">01</div>
+        <h3>なんでも聞ける、<br>話しやすさ</h3>
+        <p>「こんなこと聞いていいのかな？」も大歓迎。LINEでいつでも気軽に。専門用語は使わず、やさしい言葉でお答えします。</p>
+      </div>
+      <div class="reason reveal">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>
+        <div class="no">02</div>
+        <h3>数字を「未来」に<br>つなげる</h3>
+        <p>集計するだけじゃもったいない。決算書から見える伸びしろや課題を、次の一歩につながるアドバイスに変えてお届けします。</p>
+      </div>
+      <div class="reason reveal">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+        <div class="no">03</div>
+        <h3>幅広い経験で、<br>まるごと安心</h3>
+        <p>税務はもちろん、経営や金融の現場も知る税理士。税金の枠を超えて、事業まるごとの相談相手になります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 帯（全面写真） ================= -->
+<section class="band" style="background-image:url('assets/salon2.jpg')">
+  <div class="wrap inner reveal">
+    <p class="en">Tell us your dream.</p>
+    <h2>まずは、あなたの夢を聞かせてください。<br>お金の話は、それからで大丈夫。</h2>
+  </div>
+</section>
+
+<!-- ================= サービス ================= -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="shead">
+        <span class="num">04</span>
+        <span class="titles"><span class="en">Service</span><span class="jp">できること</span></span>
+      </div>
+      <p class="lead">これから開業する美容師さんも、すでにお店を構えている方も。<br>あなたのサロンのステージに合わせて、ぴったりのサポートを。</p>
+    </div>
+    <div class="services">
+      <div class="svc reveal">
+        <div class="ph"><span class="no">01</span><img src="assets/welcome.jpg" alt="税務顧問"></div>
+        <h3>税務顧問</h3>
+        <div class="en">Tax Advisory</div>
+        <p>日々の記帳から月々の業績チェック、決算・申告までずっとサポート。経営の判断に役立つ数字を、わかりやすくお届けします。</p>
+      </div>
+      <div class="svc reveal">
+        <div class="ph"><span class="no">02</span><img src="assets/interior.jpg" alt="確定申告サポート"></div>
+        <h3>確定申告サポート</h3>
+        <div class="en">Tax Return</div>
+        <p>所得税・消費税など、面倒な申告はまるごとおまかせ。手続きのストレスから解放されて、本業に集中できます。</p>
+      </div>
+      <div class="svc reveal">
+        <div class="ph"><span class="no">03</span><img src="assets/consult.jpg" alt="開業・創業サポート"></div>
+        <h3>開業・創業サポート</h3>
+        <div class="en">Startup Support</div>
+        <p>お店を持ちたい、その夢を形に。事業計画づくりから開業の手続き、融資・資金調達のご相談まで。安心してスタートを切れるよう伴走します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 料金 ================= -->
+<section class="section alt" id="price">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="shead">
+        <span class="num">05</span>
+        <span class="titles"><span class="en">Price</span><span class="jp">料金</span></span>
+      </div>
+      <p class="lead">「何にいくらかかるの？」が、ひと目でわかる。<br>事業の大きさに合わせて、無理のないプランを。</p>
+    </div>
+    <!-- ★料金は仮の参考値です。実際の金額に差し替えてください -->
+    <div class="plans reveal">
+      <div class="plan">
+        <div class="pname">スタート</div>
+        <div class="ptgt">個人事業主・フリーランスさん</div>
+        <div class="price"><span class="yen">¥</span>15,000<small>〜</small></div>
+        <div class="per">月額（税別）</div>
+        <ul><li>記帳のサポート</li><li>確定申告</li><li>LINEで相談し放題</li><li>年1回の面談</li></ul>
+        <a href="#contact" class="btn">相談する</a>
+      </div>
+      <div class="plan featured">
+        <span class="tag">Recommended</span>
+        <div class="pname">スタンダード</div>
+        <div class="ptgt">中小企業・成長中の会社さん</div>
+        <div class="price"><span class="yen">¥</span>30,000<small>〜</small></div>
+        <div class="per">月額（税別）</div>
+        <ul><li>記帳・月次決算</li><li>決算・法人税申告</li><li>毎月の業績報告・面談</li><li>節税・資金繰りの相談</li></ul>
+        <a href="#contact" class="btn btn-fill">相談する</a>
+      </div>
+      <div class="plan">
+        <div class="pname">スポット</div>
+        <div class="ptgt">開業・単発のご相談</div>
+        <div class="price">個別<small>お見積</small></div>
+        <div class="per">内容に応じて</div>
+        <ul><li>創業・開業サポート</li><li>会社設立の相談</li><li>融資・資金調達の相談</li><li>単発のご相談もOK</li></ul>
+        <a href="#contact" class="btn">相談する</a>
+      </div>
+    </div>
+    <p class="price-note">※ 上記は参考料金です。業種やお取引の量、ご要望に合わせてぴったりのプランをご提案します。まずは無料相談でお気軽に。</p>
+  </div>
+</section>
+
+<!-- ================= 流れ ================= -->
+<section class="section" id="flow">
+  <div class="wrap">
+    <div class="hband reveal">
+      <div class="cband-head">
+        <div class="shead">
+          <span class="num">06</span>
+          <span class="titles"><span class="en">Flow</span><span class="jp">はじめかた</span></span>
+        </div>
+      </div>
+      <span class="cline"></span>
+      <img class="cfig" src="assets/illust3p.png" alt="ドライヤーのイラスト">
+    </div>
+    <p class="lead" style="margin:26px auto 0;text-align:center">お問い合わせから契約まで、かんたん4ステップ。<br>しつこい営業は一切ないので、ご安心を。</p>
+    <div class="flow reveal">
+      <div class="step"><span class="n">01</span><div><h4>お問い合わせ</h4><p>LINEかフォームから、ひとことでOK。24時間受付、1営業日以内にお返事します。</p></div></div>
+      <div class="step"><span class="n">02</span><div><h4>無料でお話し</h4><p>今のお悩みをきかせてください。オンラインで全国どこでも。勧誘はしません。</p></div></div>
+      <div class="step"><span class="n">03</span><div><h4>ご提案・お見積</h4><p>ぴったりのプランと、わかりやすいお見積りをご提示。納得してからで大丈夫。</p></div></div>
+      <div class="step"><span class="n">04</span><div><h4>サポート開始</h4><p>契約後はすぐにスタート。かかりつけの税理士として、ずっと伴走します。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 代表紹介 ================= -->
+<section class="section alt">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="shead">
+        <span class="num">07</span>
+        <span class="titles"><span class="en">Staff</span><span class="jp">担当税理士</span></span>
+      </div>
+    </div>
+    <div class="rep reveal">
+      <div class="rep-photo"><div class="disc"><img src="assets/tamai-face.png" alt="玉井貴幸 税理士"></div></div>
+      <div class="rep-body">
+        <div class="role">Representative</div>
+        <div class="name">玉井 貴幸<small>Takayuki Tamai</small></div>
+        <p>1985年、東京都生まれ。駒澤大学経済学部を卒業後、アメリカ・ロサンゼルスへ留学。税理士法人での実務、コンサルティングファーム、大手証券会社への出向など、いろいろな現場を経験してきました。税金の話だけじゃなく、経営やお金まわりのことも、あなたのそばで一緒に考えます。</p>
+        <p class="quote">税金の話って、むずかしくて身構えちゃいますよね。<br>だからこそ、なんでも気軽に聞ける存在でいたい。<br>数字の不安は私にまかせて、あなたは夢に集中してください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= お客様の声 ================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="shead">
+        <span class="num">08</span>
+        <span class="titles"><span class="en">Voices</span><span class="jp">お客様の声</span></span>
+      </div>
+      <p class="lead">※ 掲載内容はサンプルです。実際のお客様の声に差し替えてご利用ください。</p>
+    </div>
+    <div class="voices reveal">
+      <div class="voice">
+        <span class="mark">“</span>
+        <p>開業したての不安を、ひとつずつ丁寧にほどいてくれました。数字が読めるようになって、経営に自信が持てるように。</p>
+        <div class="who">飲食業・法人 ― K様</div>
+      </div>
+      <div class="voice">
+        <span class="mark">“</span>
+        <p>LINEで気軽に質問できるのが本当に助かります。返信も早くて、相談のたびにホッと安心できます。</p>
+        <div class="who">個人事業主 ― M様</div>
+      </div>
+      <div class="voice">
+        <span class="mark">“</span>
+        <p>開業のとき、お金の知識がゼロの私に一から教えてくれました。夢だったお店を、安心してスタートできました。</p>
+        <div class="who">美容室オーナー ― T様</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section alt" id="faq">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="shead">
+        <span class="num">09</span>
+        <span class="titles"><span class="en">FAQ</span><span class="jp">よくある質問</span></span>
+      </div>
+    </div>
+    <div class="faq reveal">
+      <details class="qa"><summary>相談は本当に無料ですか？<span class="cross"></span></summary><div class="a">はい、初回のご相談は無料です。お悩みをお伺いしたうえで、ぴったりのプランとお見積りをご提示します。契約は内容にご納得いただいてからで大丈夫ですよ。</div></details>
+      <details class="qa"><summary>遠方でもお願いできますか？<span class="cross"></span></summary><div class="a">はい。オンライン面談・クラウド会計に対応しているので、全国どこからでもご依頼いただけます。対面がご希望の場合もお気軽にご相談ください。</div></details>
+      <details class="qa"><summary>今の税理士さんから乗り換えたいのですが…<span class="cross"></span></summary><div class="a">もちろん可能です。今の税理士さんとの引き継ぎもサポートしますので、スムーズに移行できます。まずは現状のお悩みをきかせてくださいね。</div></details>
+      <details class="qa"><summary>開業前でも相談できますか？<span class="cross"></span></summary><div class="a">はい。開業のタイミングから関わることで、最初の資金計画や節税を有利に進められます。創業のご相談も得意にしています。</div></details>
+      <details class="qa"><summary>顧問料のほかに追加費用はかかりますか？<span class="cross"></span></summary><div class="a">基本的に、ご契約時にお見積りした範囲で対応します。追加の作業が出る場合は、必ず事前にご説明・ご相談するのでご安心ください。</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="contact" style="background-image:url('assets/welcome.jpg')">
+  <div class="wrap cta-inner reveal">
+    <p class="en">Let's talk over a cup of tea.</p>
+    <h2>まずは、お茶するくらいの気軽さで。<br>あなたの話を、きかせてください。</h2>
+    <p>今のもやもやを整理するだけでも、きっと次の一歩が見えてきます。</p>
+    <div class="cta-actions">
+      <a href="#" class="btn btn-line">LINEで相談する</a>
+      <a href="tel:05030333310" class="btn btn-fill">☎ 050-3033-3310</a>
+    </div>
+    <p class="note">受付時間：平日 9:00〜18:00 ／ LINE・フォームは24時間受付中</p>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="brand"><span class="en">G&amp;J Partners</span><span class="jp">かかりつけの税理士</span></div>
+        <p class="footer-desc">かしこまらなくて、大丈夫。気軽になんでも聞ける存在でいたい。数字の不安は私たちにまかせて、あなたは本業に集中してくださいね。</p>
+      </div>
+      <div>
+        <h5>Menu</h5>
+        <ul class="footer-links">
+          <li><a href="#concept">Concept</a></li>
+          <li><a href="#reasons">Features</a></li>
+          <li><a href="#services">Service</a></li>
+          <li><a href="#price">Price</a></li>
+          <li><a href="#flow">Flow</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul class="footer-info">
+          <li><span class="k">TEL</span><span>050-3033-3310</span></li>
+          <li><span class="k">Hours</span><span>平日 9:00〜18:00</span></li>
+          <li><span class="k">Area</span><span>全国オンライン対応</span></li>
+          <li><span class="k">Address</span><span>※事務所住所を記載</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <small>&copy; 2026 G&amp;J Partners Tax Corporation</small>
+      <small>Foundation design — 内容は差し替え・追記してご利用ください</small>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= モバイル追従バー ================= -->
+<div class="mobile-bar">
+  <a href="tel:05030333310" class="btn">☎ 電話</a>
+  <a href="#contact" class="btn btn-line">LINEで無料相談</a>
+</div>
+
+<script>
+const header=document.getElementById('header');
+addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>40));
+const nav=document.getElementById('nav'),tg=document.getElementById('navToggle');
+tg.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.addEventListener('click',e=>{if(e.target.closest('a'))nav.classList.remove('open')});
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
