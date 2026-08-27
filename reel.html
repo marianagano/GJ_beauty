@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美容室のかかりつけ税理士｜Reel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gray:#7a756f; --gray2:#6f6a63; --greige:#8c8982; --mute:rgba(255,255,255,.82);
+    --terra:#eaa274; --mincho:"Shippori Mincho",serif; --serif:"Cormorant Garamond",serif; --gothic:"Zen Kaku Gothic New",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%;background:#111;font-family:var(--gothic)}
+  body{display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .stage{position:relative;aspect-ratio:9/16;width:min(100vw,56.25vh);height:auto;overflow:hidden;background:var(--gray);container-type:size;box-shadow:0 0 60px rgba(0,0,0,.5)}
+
+  .scene{position:absolute;inset:0;opacity:0;transition:opacity .6s ease;display:flex;align-items:center;justify-content:center}
+  .scene.active{opacity:1}
+  .scene.graybg{background:var(--gray)}
+  .scene.graybg.alt{background:var(--gray2)}
+  .bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.05)}
+  .scene.active .bg{animation:kb 7s ease-out both}
+  .ov{position:absolute;inset:0;background:linear-gradient(rgba(45,42,38,.5),rgba(45,42,38,.62))}
+  .ov.strong{background:linear-gradient(rgba(45,42,38,.6),rgba(45,42,38,.68))}
+  .content{position:relative;z-index:2;width:100%;padding:0 6cqw;text-align:center}
+  .hook,.quotes,.reassure,.rep-text,.cta-h{white-space:nowrap}
+
+  .a{opacity:0}
+  .scene.active .d1{animation:rise 1s .12s both}
+  .scene.active .d2{animation:rise 1s .55s both}
+  .scene.active .d3{animation:rise 1s 1.05s both}
+  .scene.active .d4{animation:rise 1s 1.5s both}
+  @keyframes rise{from{opacity:0;transform:translateY(4cqw)}to{opacity:1;transform:none}}
+  @keyframes kb{from{transform:scale(1.05)}to{transform:scale(1.18)}}
+
+  /* 1 hook */
+  .hook{font-family:var(--mincho);font-size:4.5cqw;line-height:1.85;color:var(--mute);letter-spacing:.04em}
+  .brandline{margin-top:6cqw}
+  .brandline .pre{display:block;font-family:var(--mincho);font-weight:500;color:#fff;font-size:6cqw;letter-spacing:.16em;margin-bottom:1.5cqw}
+  .brandline .kak{display:block;width:50cqw;margin:0 auto;filter:drop-shadow(0 2px 10px rgba(0,0,0,.35))}
+  .brandline .zei{display:block;font-family:var(--mincho);font-weight:600;color:#fff;font-size:11cqw;letter-spacing:.05em;margin-top:1cqw}
+
+  /* 2 pain */
+  .quotes{font-family:var(--mincho);font-weight:500;color:#fff;font-size:6.2cqw;line-height:1.8;margin-bottom:8cqw;letter-spacing:.02em}
+  .reassure{font-family:var(--mincho);font-weight:600;color:#fff;font-size:4.9cqw;line-height:1.95;letter-spacing:.04em}
+  .reassure b{color:var(--terra);font-weight:600}
+
+  /* 3 staff */
+  .rep-photo{width:42cqw;height:42cqw;border-radius:50%;overflow:hidden;border:1px solid rgba(255,255,255,.5);margin:0 auto 5cqw;position:relative}
+  .rep-photo::before{content:"";position:absolute;inset:-2.4cqw;border:1px solid rgba(255,255,255,.22);border-radius:50%}
+  .rep-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+  .rep-role{font-family:var(--serif);font-style:italic;color:var(--terra);font-size:4cqw;letter-spacing:.08em}
+  .rep-name{font-family:var(--mincho);font-weight:600;color:#fff;font-size:6.4cqw;letter-spacing:.05em;margin-top:.6cqw;white-space:nowrap}
+  .rep-name .ttl{font-size:4.2cqw;color:var(--mute);letter-spacing:.1em;margin-left:2.6cqw}
+  .rep-text{font-family:var(--mincho);color:#fff;font-size:5cqw;line-height:2.05;margin-top:6cqw;letter-spacing:.03em}
+
+  /* 4 cta */
+  .illbg{position:absolute;z-index:1;width:115cqw;right:-16cqw;bottom:-2cqw;opacity:.24}
+  .cta-h{font-family:var(--mincho);font-weight:600;color:#fff;font-size:6.5cqw;line-height:1.66;letter-spacing:.04em}
+  .cta-free{display:inline-block;font-family:var(--mincho);font-weight:600;color:#3a2a1a;background:var(--terra);font-size:5cqw;letter-spacing:.08em;padding:2.4cqw 6cqw;border-radius:100px;margin-top:7cqw}
+  .cta-line{font-family:var(--gothic);color:#fff;font-size:4.6cqw;letter-spacing:.06em;margin-top:5cqw}
+  .cta-btn{display:inline-block;font-family:var(--gothic);font-weight:500;color:#0e3d1e;background:#06c755;padding:3cqw 8cqw;border-radius:100px;font-size:5.2cqw;letter-spacing:.06em;margin-top:2.6cqw}
+
+  /* progress */
+  .prog{position:absolute;top:3cqw;left:4cqw;right:4cqw;z-index:5;display:flex;gap:1.6cqw}
+  .prog .seg{flex:1;height:.9cqw;border-radius:2px;background:rgba(255,255,255,.28);overflow:hidden}
+  .prog .seg i{display:block;height:100%;width:0;background:#fff}
+  .replay{position:absolute;z-index:6;bottom:3cqw;right:4cqw;font-family:var(--serif);font-size:3.2cqw;letter-spacing:.1em;color:rgba(255,255,255,.5);background:none;border:0;cursor:pointer}
+</style>
+</head>
+<body>
+  <div class="stage" id="stage">
+    <div class="prog" id="prog">
+      <div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div>
+    </div>
+
+    <!-- ① hook -->
+    <div class="scene" data-dur="5000">
+      <div class="bg" style="background-image:url('assets/salon2.jpg')"></div>
+      <div class="ov"></div>
+      <div class="content">
+        <p class="hook a d1">開業を考える美容師さん<br>悩みを抱えるサロンオーナーさんへ</p>
+        <div class="brandline a d2">
+          <span class="pre">美容室の</span>
+          <img class="kak" src="assets/kakaritsuke.png" alt="かかりつけ">
+          <span class="zei">税理士です。</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ② pain / reassure -->
+    <div class="scene" data-dur="5200">
+      <div class="bg" style="background-image:url('assets/welcome.jpg')"></div>
+      <div class="ov"></div>
+      <div class="content">
+        <p class="quotes a d1">「税理士って堅そう…」<br>「数字は苦手…」</p>
+        <p class="reassure a d2">かしこまらなくて、大丈夫です。<br>数字の不安は、<br><b>ぜんぶ任せてください。</b></p>
+      </div>
+    </div>
+
+    <!-- ③ staff -->
+    <div class="scene graybg alt" data-dur="5600">
+      <div class="content">
+        <div class="rep-photo a d1"><img src="assets/tamai-face.jpg" alt="玉井貴幸"></div>
+        <p class="rep-role a d2">Representative</p>
+        <p class="rep-name a d2">玉井 貴幸<span class="ttl">代表税理士</span></p>
+        <p class="rep-text a d3">税金の話だけじゃなく、<br>経営やお金まわりのことも、<br>あなたのそばで一緒に考えます。</p>
+      </div>
+    </div>
+
+    <!-- ④ cta -->
+    <div class="scene" data-dur="5200" style="background:var(--greige)">
+      <img class="illbg" src="assets/illust1p.png" alt="">
+      <div class="content">
+        <p class="cta-h a d1">まずは、お茶するくらいの<br>気軽さで。<br>あなたの話を、<br>きかせてください。</p>
+        <p class="a d2"><span class="cta-free">無料ご相談 受付中</span></p>
+        <p class="cta-line a d3">お問合せは LINE から</p>
+        <div class="a d3"><span class="cta-btn">LINEで相談する</span></div>
+      </div>
+    </div>
+
+  </div>
+
+<script>
+  const scenes = Array.from(document.querySelectorAll('.scene'));
+  const segs = Array.from(document.querySelectorAll('.prog .seg i'));
+  let i = 0, timer = null;
+  function show(idx){
+    scenes.forEach(s=>s.classList.remove('active'));
+    segs.forEach((s,k)=>{ s.style.transition='none'; s.style.width = (k<idx?'100%':'0%'); });
+    const sc = scenes[idx];
+    void sc.offsetWidth;
+    sc.classList.add('active');
+    const dur = parseInt(sc.dataset.dur,10);
+    const seg = segs[idx];
+    void seg.offsetWidth;
+    seg.style.transition = 'width '+dur+'ms linear';
+    seg.style.width = '100%';
+    timer = setTimeout(()=>{ i = (idx+1) % scenes.length; show(i); }, dur);
+  }
+  function start(){ clearTimeout(timer); i=0; show(0); }
+  start();
+</script>
+</body>
+</html>
