@@ -1,0 +1,35 @@
+name: Deploy beauty.gjtax.net (Xserver)
+
+# main に push すると自動で Xサーバーの beauty.gjtax.net へアップロードします。
+# GitHub の Actions タブから手動実行（Run workflow）もできます。
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v4
+
+      - name: XサーバーへFTPアップロード
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}       # 例: sv####.xserver.jp
+          username: ${{ secrets.FTP_USERNAME }}    # XサーバーのFTPユーザー名
+          password: ${{ secrets.FTP_PASSWORD }}    # XサーバーのFTPパスワード
+          protocol: ftps                            # XサーバーはFTPS推奨
+          port: 21
+          # 転送先フォルダ（beautyサブドメインの公開ディレクトリ）
+          # ※もしファイルが違う場所に上がる場合はここを調整します
+          server-dir: /gjtax.net/public_html/beauty/
+          # LP本体（index.html と assets）だけをアップ。その他は除外
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            reel.html
+            icons/**
+            **/*.zip
