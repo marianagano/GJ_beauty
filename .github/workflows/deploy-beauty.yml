@@ -22,8 +22,9 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}    # XサーバーのFTPパスワード
           protocol: ftps                            # XサーバーはFTPS推奨
           port: 21
-          # 転送先フォルダ（beautyサブドメインの公開ディレクトリ）
-          server-dir: /gjtax.net/public_html/beauty/
+          # 追加FTPアカウントの接続先を beauty フォルダに限定するので、
+          # 転送先はそのルート（./）でOK
+          server-dir: ./
           # LP本体（index.html と assets）だけをアップ。その他は除外
           exclude: |
             **/.git*
