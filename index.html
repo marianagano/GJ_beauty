@@ -363,6 +363,12 @@ ul{list-style:none}
   .nav.open{display:flex;position:fixed;inset:0;background:rgba(51,48,44,.98);flex-direction:column;justify-content:center;gap:34px;z-index:98}
   .nav.open a{font-size:26px}
   .nav.open a .j{font-size:11px;margin-top:4px}
+  /* スマホ：指定の文を1行に収める（はみ出さない範囲で自動縮小） */
+  .band h2{white-space:nowrap;letter-spacing:.02em;font-size:clamp(13px,4.2vw,22px);line-height:1.85}
+  .cta h2{white-space:nowrap;letter-spacing:.02em;font-size:clamp(14px,4.7vw,24px);line-height:1.85}
+  .footer-info li{font-size:14px;gap:12px}
+  .footer-info .k{min-width:52px;font-size:13px}
+  .footer-info li span{white-space:nowrap}
 }
 </style>
 </head>
@@ -722,7 +728,6 @@ ul{list-style:none}
     </nav>
     <div class="footer-bottom">
       <small>&copy; 2026 G&amp;J Partners Tax Corporation</small>
-      <small>Foundation design — 内容は差し替え・追記してご利用ください</small>
     </div>
   </div>
 </footer>
