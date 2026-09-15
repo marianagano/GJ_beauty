@@ -96,7 +96,7 @@ ul{list-style:none}
 /* ============================================================
    HEADER
    ============================================================ */
-.site-header{position:fixed;top:0;left:0;right:0;z-index:100;padding:26px 0;transition:.4s}
+.site-header{position:absolute;top:0;left:0;right:0;z-index:100;padding:26px 0;transition:.4s}
 .site-header.scrolled{padding:15px 0;background:rgba(122,117,111,.9);backdrop-filter:blur(12px)}
 .header-inner{display:flex;align-items:center;justify-content:space-between}
 .brand{display:flex;flex-direction:column;line-height:1.3}
@@ -360,7 +360,7 @@ ul{list-style:none}
   .nav-toggle{display:flex}
   .mobile-bar{display:flex}
   body{padding-bottom:72px}
-  .nav.open{display:flex;position:fixed;inset:0;background:rgba(51,48,44,.98);flex-direction:column;justify-content:center;gap:34px;z-index:98}
+  .nav.open{display:flex;position:fixed;inset:0;background:#33302c;flex-direction:column;justify-content:center;gap:34px;z-index:99;overflow-y:auto;-webkit-overflow-scrolling:touch}
   .nav.open a{font-size:26px}
   .nav.open a .j{font-size:11px;margin-top:4px}
   /* スマホ：指定の文を1行に収める（はみ出さない範囲で自動縮小） */
@@ -742,8 +742,9 @@ ul{list-style:none}
 const header=document.getElementById('header');
 addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>40));
 const nav=document.getElementById('nav'),tg=document.getElementById('navToggle');
-tg.addEventListener('click',()=>nav.classList.toggle('open'));
-nav.addEventListener('click',e=>{if(e.target.closest('a'))nav.classList.remove('open')});
+function setMenu(open){nav.classList.toggle('open',open);document.documentElement.style.overflow=open?'hidden':'';document.body.style.overflow=open?'hidden':'';}
+tg.addEventListener('click',()=>setMenu(!nav.classList.contains('open')));
+nav.addEventListener('click',e=>{if(e.target.closest('a'))setMenu(false)});
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
